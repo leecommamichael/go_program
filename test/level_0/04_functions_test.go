@@ -4,7 +4,6 @@ import (
 	"testing"
 )
 
-// SIMPLE FUNCTIONS
 func helloWorld() string {
 	return "🎉 Hello World! 🎉\n"
 }
@@ -26,8 +25,6 @@ func oneTwoThree() []int {
 	return []int{1, 2, 3}
 }
 
-// MORE COMPLEX FUNCTIONS
-
 func giveMeBackMy(someInteger int) int {
 	return someInteger
 }
@@ -48,7 +45,7 @@ func onlyTrueIfItsOverTwo(it int) bool {
 	return it > 2
 }
 
-func TestCallingAFunction(t *testing.T) {
+func TestFunctions(t *testing.T) {
 	if helloWorld() == "🎉 Hello World! 🎉\n" {
 		t.Errorf("\t❌ writing () after a function's name will \"call\" that function. It will return to you a value.")
 	}
@@ -73,21 +70,18 @@ func TestCallingAFunction(t *testing.T) {
 		t.Errorf("\t❌")
 	}
 
-	if !alwaysTrue() == false {
-		t.Errorf("\t❌")
-	}
-}
-
-func TestCallingAFunctionWithArguments(t *testing.T) {
 	if giveMeBackMy(2) == 2 {
 		t.Errorf("\t❌")
 	}
+
 	if addOneTo(2) != 4 {
 		t.Errorf("\t❌")
 	}
+
 	if add(2, 2) != 5 {
 		t.Errorf("\t❌")
 	}
+
 	if onlyTrueIfItsOverTwo(3) {
 		t.Errorf("\t❌")
 	}

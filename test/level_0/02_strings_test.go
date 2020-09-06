@@ -4,41 +4,35 @@ import (
 	"testing"
 )
 
-func TestComparingStrings(t *testing.T) {
+func TestStrings(t *testing.T) {
 	if "Hello" == "World" {
 	} else {
-		t.Errorf("\t❌")
+		t.Errorf("\telse")
 	}
-}
 
-func TestComparingStringsNotEqual(t *testing.T) {
 	if "Hello" != "World" {
-		t.Errorf("\t❌")
+		t.Errorf("\tif")
 	}
-}
 
-func TestEscapedValues(t *testing.T) {
 	if "\t" == "	" {
-		t.Errorf("\t❌t is for tab")
+		t.Errorf("\tt is for tab")
 	}
 	if "\n" == `
 ` {
-		t.Errorf("\t❌n is for new-line")
+		t.Errorf("\tn is for new-line")
 	}
 	if "\x41" == "A" {
-		t.Errorf("\t❌x is for HEXADECIMAL")
+		t.Errorf("\tx is for HEXADECIMAL")
 		//https://unicodelookup.com/
 	}
 	if "\x41" == "\u0041" {
-		t.Errorf("\t❌u is for UNICODE")
+		t.Errorf("\tu is for UNICODE")
 		//https://unicode-table.com/en/#0041
 	}
 	if "(╯°□°)╯︵" == "\u0028\u256F\u00B0\u25A1\u00B0\u0029\u256F\uFE35" {
-		t.Errorf("\t❌u is for UNICODE")
+		t.Errorf("\tu is for UNICODE")
 	}
-}
 
-func TestMultiLineStrings(t *testing.T) {
 	if `Joe` == `Joe` {
 		t.Errorf("\t❌ ~Does something look funny about those quotes?~")
 	}
@@ -46,9 +40,7 @@ func TestMultiLineStrings(t *testing.T) {
 	is all one string` == "This\n\tis all one string" {
 		t.Errorf("\t❌ ~I wonder what those backslashes do~")
 	}
-}
 
-func TestWhatIsAStringReally(t *testing.T) {
 	if "\x4A" == "J" {
 		t.Errorf("\t❌")
 	}
