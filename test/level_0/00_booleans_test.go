@@ -8,11 +8,11 @@ func TestBooleans(t *testing.T) {
 	if true {
 		t.Error("\t\tA bool (or boolean) is either true or false")
 	} else {
-		//this block of code is empty
+		//this would run if it were false
 	}
 
 	if false {
-		//this block of code is empty
+		//this would run if it were true
 	} else {
 		t.Error("\ttrue and false are boolean values.")
 	}
